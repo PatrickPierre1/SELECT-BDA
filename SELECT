@@ -1,0 +1,30 @@
+#SELECT nome, valor_unitario FROM produto WHERE valor_unitario = (SELECT MAX(valor_unitario) FROM produto);
+
+#SELECT COUNT(*) FROM produto WHERE qtd_estoque < 1;
+
+#SELECT COUNT(*) FROM pedido WHERE DATA LIKE "2022-12-%";
+
+#SELECT nome FROM vendedor WHERE id IN (SELECT id_vendedor FROM pedido WHERE DATA = "2022-10-03");
+
+#SELECT COUNT(*) FROM pedido WHERE id_vendedor = (SELECT id FROM vendedor WHERE nome = "Josias Ferraz") AND DATA LIKE "2022-09-%";
+
+#SELECT nome FROM produto WHERE id IN (SELECT id_produto FROM produto_pedido WHERE qtd >= "4" AND valor_total > "50");
+
+#SELECT * FROM pedido WHERE id_vendedor = (SELECT id FROM vendedor WHERE nome = "Pedro Paulo") AND DATA LIKE "2022-08-%" ORDER BY valor_total DESC;
+
+#SELECT nome FROM produto WHERE id IN (SELECT id_produto FROM produto_pedido WHERE id_pedido IN (SELECT id FROM pedido WHERE DATA LIKE "2021-01-%"));
+
+#SELECT nome FROM cliente WHERE id IN (SELECT id_cliente FROM pedido WHERE id_vendedor IN (SELECT id FROM vendedor WHERE nome = "João Carlos"));
+
+#SELECT p.nome FROM produto AS p
+#JOIN produto_pedido AS pp ON p.id = pp.id_produto
+#JOIN pedido AS pe ON pe.id = pp.id_pedido
+#WHERE pe.data LIKE "2021-01-%";
+
+#SELECT c.nome FROM cliente AS c
+#JOIN pedido AS cc ON c.id = cc.id_cliente
+#JOIN vendedor AS vv ON vv.id = cc.id
+#WHERE vv.nome = "João Carlos";
+
+                
+                                                  
