@@ -26,5 +26,29 @@
 #JOIN vendedor AS vv ON vv.id = cc.id
 #WHERE vv.nome = "João Carlos";
 
+-------------------------------------------------
+
+#SELECT data, hora FROM agendamento WHERE id_funcionario = (SELECT id FROM funcionario WHERE nome = "Sandra Carvalho");
+#SELECT nome FROM cliente WHERE id IN (SELECT id_cliente FROM agendamento WHERE DATA LIKE "2023-08-%");
+#SELECT COUNT(*) FROM cliente WHERE id IN (SELECT id_cliente FROM agendamento WHERE id_funcionario IN (SELECT id FROM funcionario WHERE nome = "Fernanda Pádua") AND DATA LIKE "2023-%" AND hora BETWEEN "06:00" AND "12:00");
+#SELECT nome FROM servico WHERE id IN (SELECT id_servico FROM agendamento_servico WHERE id_agendamento IN (SELECT id FROM agendamento WHERE DATA LIKE "2023-%" AND hora BETWEEN "12:00" AND "17:00"));
+
+/*SELECT a.data, a.hora FROM agendamento as a
+JOIN funcionario AS f ON a.id_funcionario = f.id
+WHERE f.nome = 'Sandra Carvalho';*/
+
+/*SELECT c.nome FROM cliente AS c
+JOIN agendamento AS a ON c.id = id_cliente
+WHERE a.DATA LIKE "2023-08-%";*/
+
+/*SELECT COUNT(*) FROM cliente as c
+JOIN agendamento AS a ON c.id = id_cliente
+JOIN funcionario AS f ON a.id_funcionario = f.id
+WHERE f.nome = "Fernanda Pádua" AND a.data LIKE "2023-%" AND a.hora BETWEEN "06:00" AND "12:00";*/
+
+/*SELECT s.nome FROM servico AS s
+JOIN agendamento_servico AS ags ON s.id = ags.id_servico
+JOIN agendamento AS a ON ags.id_agendamento = a.id
+WHERE a.data LIKE "2023-%" AND a.hora BETWEEN "12:00" AND "17:00";*/
                 
                                                   
