@@ -30,7 +30,7 @@ WHERE pp.qtd > "4" and pp.valor_total > "50";*/
 
 /*SELECT * FROM pedido as pe
 JOIN vendedor as v on pe.id_vendedor = v.id
-WHERE pe.data LIKE "2022-08-%" ORDER BY pe.valor_total DESC;*/
+WHERE v.nome = "Pedro Paulo" AND pe.data LIKE "2022-08-%" ORDER BY pe.valor_total DESC;*/
 
 #SELECT p.nome FROM produto AS p
 #JOIN produto_pedido AS pp ON p.id = pp.id_produto
