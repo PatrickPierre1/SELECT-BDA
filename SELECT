@@ -16,6 +16,22 @@
 
 #SELECT nome FROM cliente WHERE id IN (SELECT id_cliente FROM pedido WHERE id_vendedor IN (SELECT id FROM vendedor WHERE nome = "João Carlos"));
 
+/*SELECT v.nome FROM vendedor AS v
+JOIN pedido AS p ON p.id_vendedor = v.id
+WHERE p.data = "2022-10-03";*/
+
+/*SELECT COUNT(*) FROM pedido AS p
+JOIN vendedor as v ON p.id_vendedor = v.id
+WHERE v.nome = "Josias Ferraz" AND p.data LIKE "2022-09-%";*/
+
+/*SELECT p.nome FROM produto AS p
+JOIN produto_pedido AS pp ON p.id = pp.id_produto
+WHERE pp.qtd > "4" and pp.valor_total > "50";*/
+
+/*SELECT * FROM pedido as pe
+JOIN vendedor as v on pe.id_vendedor = v.id
+WHERE pe.data LIKE "2022-08-%" ORDER BY pe.valor_total DESC;*/
+
 #SELECT p.nome FROM produto AS p
 #JOIN produto_pedido AS pp ON p.id = pp.id_produto
 #JOIN pedido AS pe ON pe.id = pp.id_pedido
