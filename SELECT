@@ -54,11 +54,11 @@ JOIN funcionario AS f ON a.id_funcionario = f.id
 WHERE f.nome = 'Sandra Carvalho';*/
 
 /*SELECT c.nome FROM cliente AS c
-JOIN agendamento AS a ON c.id = id_cliente
+JOIN agendamento AS a ON c.id = a.id_cliente
 WHERE a.DATA LIKE "2023-08-%";*/
 
 /*SELECT COUNT(*) FROM cliente as c
-JOIN agendamento AS a ON c.id = id_cliente
+JOIN agendamento AS a ON c.id = a.id_cliente
 JOIN funcionario AS f ON a.id_funcionario = f.id
 WHERE f.nome = "Fernanda Pádua" AND a.data LIKE "2023-%" AND a.hora BETWEEN "06:00" AND "12:00";*/
 
