@@ -66,5 +66,45 @@ WHERE f.nome = "Fernanda Pádua" AND a.data LIKE "2023-%" AND a.hora BETWEEN "06
 JOIN agendamento_servico AS ags ON s.id = ags.id_servico
 JOIN agendamento AS a ON ags.id_agendamento = a.id
 WHERE a.data LIKE "2023-%" AND a.hora BETWEEN "12:00" AND "17:00";*/
+
+
+
+------------------------------------------------
+
+/*SELECT h.nome,h.cpf, h.telefone FROM hospede AS h
+JOIN reserva AS r ON h.id = r.id_hospede
+WHERE r.entrada LIKE "2023-10-%";*/
+
+/*SELECT COUNT(*) FROM reserva AS r
+JOIN reserva_quarto AS re ON r.id = re.id_reserva
+JOIN quarto AS q ON q.id = re.id_quarto
+WHERE q.tipo = "Duplo Solteiro";*/
+
+/*SELECT COUNT(*) FROM reserva AS r
+JOIN hospede AS h ON r.id_hospede = h.id
+WHERE h.nome = "Carlos dos Santos" AND r.entrada LIKE "2023-%";*/
+
+/*SELECT COUNT(*) FROM quarto AS q
+JOIN reserva_quarto AS re ON q.id = re.id_quarto
+JOIN reserva AS r ON r.id = re.id_reserva
+WHERE r.entrada LIKE "2023-%";*/
+
+/*SELECT r.entrada, r.saida, r.valor_total FROM reserva AS r
+JOIN hospede AS h ON r.id_hospede = h.id
+WHERE h.nome = "João da Silva" AND r.entrada LIKE "2023-10-%";*/
+
+/*SELECT h.nome, q.tipo FROM hospede AS h
+JOIN reserva AS r ON h.id = r.id_hospede
+JOIN reserva_quarto AS re ON r.id = re.id_reserva
+JOIN quarto AS q ON re.id_quarto = q.id
+WHERE r.entrada LIKE "2023-%" ORDER BY h.nome ASC;*/
+
+/*SELECT h.nome, h.telefone, r.entrada, r.saida, q.tipo, q.valor FROM hospede AS h
+JOIN reserva AS r ON h.id = r.id_hospede
+JOIN reserva_quarto AS re ON r.id = re.id_reserva
+JOIN quarto AS q ON re.id_quarto = q.id
+WHERE r.entrada LIKE "2023-%" ORDER BY r.entrada DESC;*/ 
+
+
                 
                                                   
